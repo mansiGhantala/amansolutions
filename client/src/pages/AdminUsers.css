@@ -1,0 +1,114 @@
+/* Admin Users Section */
+.admin-users-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.admin-users-section .container h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Wrapper for table with scroll on small screens */
+.admin-users {
+  width: 100%;
+  max-width: 1400px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Table scroll wrapper */
+.admin-users > div {
+  overflow-x: auto;
+}
+
+/* Table Styling */
+.admin-users table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  background: transparent;
+  color: #fff;
+}
+
+.admin-users thead {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-users th,
+.admin-users td {
+  padding: 1rem 2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-users tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.admin-users a,
+.admin-users button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-users a {
+  background-color: #3498db;
+}
+
+.admin-users a:hover {
+  background-color: #217dbb;
+}
+
+.admin-users button {
+  background-color: #e74c3c;
+}
+
+.admin-users button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-users-section .container h1 {
+    font-size: 2rem;
+  }
+
+  .admin-users {
+    padding: 1rem;
+  }
+
+  .admin-users table {
+    min-width: 600px;
+  }
+
+  .admin-users th,
+  .admin-users td {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .admin-users a,
+  .admin-users button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}

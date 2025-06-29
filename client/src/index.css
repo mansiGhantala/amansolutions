@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+html{
+  font-size:62.5%;
+}body {
+  margin: 0;
+  min-height: 100vh;
+  /* min-width: 32rem; */
+}
+/* toastify ====== */
+.toastBody {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  font-size: 1.7rem !important;
+}
+h1{ 
+   font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+p,li,label,input,textarea{
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.06rem;
+  word-spacing: 0.06rem;
+}
+
+a{
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  /* color: ; */
+  text-decoration: inherit;
+}
+li{
+  list-style: none;
+}
+
+.container{
+  max-width: 140rem;
+  padding: 4rem 2,4rem;
+  margin: 0 auto;
+}
+
+.grid{
+  display: grid;
+  gap: 6.4rem;
+}
+.grid-two-cols{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 8px;
+  color: #2c3e50;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  min-width: 140px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #fff;
+  color: #4ca1af;
+
+}
+
+button:focus {
+  outline: 3px solid #ffd700;
+  outline-offset: 3px;
+}
+
+form h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+form div{
+    margin-bottom: 1rem;
+
+}
+ label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+      color: #ffd900da; /* golden label for contrast */
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* soft border */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* light glassy look */
+    color: #ffffff; /* white text */
+    font-size: 1.1rem;
+    outline: none;
+    backdrop-filter: blur(5px); /* modern glass effect */
+    transition: all 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* soft white placeholder */
+}
+
+ input:focus,
+ textarea:focus {
+    background-color: rgba(255, 255, 255, 0.15); /* slightly lighter on focus */
+    box-shadow: 0 0 8px #4ca1af; /* glowing blue shadow */
+    border-color: #ffd700; /* golden border focus */
+}
+/* Full Page Sticky Footer Layout */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full screen height */
+}
+
+.page-content {
+    flex: 1; /* This pushes footer to the bottom if content is short */
+}
+
+
+
+/* alt press + right left top bottom  for code in change line */

@@ -1,0 +1,84 @@
+.admin-contacts-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
+}
+
+.admin-contacts-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.container.admin-contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Contact Card */
+.container.admin-contact > div {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.container.admin-contact > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional avatar circle (if image added later) */
+.container.admin-contact > div::before {
+  content: "👤";
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Text styling */
+.container.admin-contact p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+/* DELETE button */
+.container.admin-contact button { 
+  /* margin-top: 1rem;
+  /* background-color: #e74c3c; */
+  /* color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;  */
+  font-weight: 600;
+  /* cursor: pointer; */
+  /* transition: background 0.3s ease;  */
+}
+
+/* .container.admin-contact button:hover {
+  background-color: #c0392b;
+} */
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .admin-contacts-section h1 {
+    font-size: 2rem;
+  }
+
+  .container.admin-contact {
+    grid-template-columns: 1fr;
+  }
+}
