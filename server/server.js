@@ -10,12 +10,17 @@ const connectdb = require("./utils/db");
 const errorMiddleware = require("./middlewares/error-middleware");
 
 // let's tackle cors 
+// const corsOptions = {
+//   // origin: "http://localhost:5173",
+//   methods:["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD",],
+//   credentials: true,
+// };
 const corsOptions = {
-  // origin: "http://localhost:5173",
-  origin: "https://amansolutions.vercel.app",
-  methods:["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD",],
+  origin: "https://amansolutions.vercel.app", // ✅ Your frontend live domain
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
   credentials: true,
 };
+
 app.use(cors(corsOptions));
 
 // middleware
