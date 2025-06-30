@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { useAuth ,API} from "../store/auth";
+import { useAuth } from "../store/auth";
 import './AdminUsers.css';
 import { Link } from "react-router-dom";
 
 const AdminUsers = () => {
     const [users, setUsers] = useState([]);
-    const { authorizationToken } = useAuth();
+    const { authorizationToken ,API } = useAuth();
 
     const getAllUsersData = async () => {
         try {

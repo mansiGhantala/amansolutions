@@ -11,9 +11,7 @@ const defaultContactFromData = {
 const Contact = () => {
 
     const [contact, setContact] = useState(defaultContactFromData);
-
     const [userData, setUserData] = useState(true);
-
     const { user, API} = useAuth();
 
     if (userData && user) {
