@@ -13,8 +13,14 @@ import AdminLayout from "./components/layouts/Admin-Layout";
 import AdminContact from "./pages/Admin-Contact";
 import AdminUsers from "./pages/Admin-Users";
 import AdminUpdate from "./pages/Admin-Update";
+import { useAuth } from "./store/auth";
 
 const App = () => {
+  const { user, isLoading } = useAuth();
+const isLoggedIn = !!user?._id;
+const isAdmin = user?.isAdmin === true;
+
+if (isLoading) return <h2>Loading...</h2>;
 
   return (
     <div className="page-wrapper"> {/* ✅ Flex container */}
@@ -29,15 +35,18 @@ const App = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
-            <Route path="*" element={<Error />} />
-            <Route path="/admin" element={<AdminLayout />}>
-             <Route index element={<AdminUsers />} /> {/* ✅ Default for /admin */}
+
+            <Route path="/admin" element={isLoggedIn && isAdmin ? <AdminLayout /> : <Navigate to="/login" />}>
+            {/* <Route path="/admin" element={<AdminLayout />}> */} 
+              <Route index element={<AdminUsers />} /> {/* ✅ Default for /admin */}
               <Route path="users" element={<AdminUsers />} />
               <Route path="contacts" element={<AdminContact />} />
-              <Route path="users/:id/edit" element={<AdminUpdate />} /> 
+              <Route path="users/:id/edit" element={<AdminUpdate />} />
             </Route>
+            <Route path="*" element={<Error />} />
           </Routes>
         </div>
+
         <Footer />
       </BrowserRouter>
     </div>

@@ -14,13 +14,11 @@ const AdminLayout = () => {
   console.log("admin layout",user);
 
 
-  if (isLoading) {
-  return <h1>Loading...</h1>;
-}
+  if (isLoading) return <h1>Loading...</h1>;
 
-if (!user?.isAdmin) {
-  return <Navigate to="/" replace />;
-}
+
+if (!user?.isAdmin) return <Navigate to="/" replace />;
+
   return (
     <>
       <header className="admin-header">
