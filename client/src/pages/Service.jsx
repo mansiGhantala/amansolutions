@@ -15,7 +15,7 @@ const Service = () => {
     <p>Loading Services...</p>
 ) : (
     services.map((curElem, index) => {
-        const { price, description, provider, service } = curElem;
+        const { description, provider, service } = curElem;
 
         return (
             <div className="card" key={index}>
@@ -25,7 +25,6 @@ const Service = () => {
                 <div className="card-details">
                     <div className="grid grid-two-cols">
                         <p>{provider}</p>
-                        <p>{price}</p>
                     </div>
                     <h2>{service}</h2>
                     <p>{description}</p>

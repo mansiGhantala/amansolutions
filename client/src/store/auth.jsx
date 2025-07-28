@@ -5,8 +5,7 @@ import { createContext, useContext, useEffect, useState } from "react";
     const [token, setToken] = useState(localStorage.getItem("token"));
     const [user, setUser] = useState("");
     const [isLoading, setIsLoading] = useState(true);
- const [services, setServices] = useState([]); // Correct initialization
-// const authorizationToken = `Bearer ${token}`;//add for admin-users.jsx authorizationToken
+ const [services, setServices] = useState([]); 
 const authorizationToken = `Bearer ${token}`;
 // const API = "http://localhost:5000";
 // const API = "https://api"
@@ -21,13 +20,11 @@ const API = import.meta.env.VITE_APP_URI_API;
     let isLoggedIn = !!token;
     console.log("isLoggedIn",isLoggedIn);
     
-    // tackling the logout functionality
     const LogoutUser = () =>{
         setToken("");
         return localStorage.removeItem("token");
     };
 
-// jwt Authentication - to get the currently loggedin user data
 const userAuthentication = async () => {
   try {
     setIsLoading(true);
